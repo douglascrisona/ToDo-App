@@ -1,6 +1,5 @@
 var app = angular.module('todo', []);
 
-
 app.controller('homeController', home);
 
 function home() {
@@ -13,12 +12,4 @@ function home() {
     {item: 'Eat more'},
     {item: 'Go to sleep'}
   ]
-
 }
-
-/**
-<div ng-click="todo.checked" >
-  <input type="checkbox">
-  <span ng-class="checked">{{todo.item}}</span>
-</div>
-**/

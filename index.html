@@ -13,13 +13,10 @@
       </h1>
       <h2 ng-repeat="todo in home.todos">
         <span ng-class="todo.checked ? 'checked': 'h2'">
-        <!--  <span ng-click="todo.checked = !todo.checked"> -->
-            <input type="checkbox" ng-click="todo.checked = !todo.checked">
-            {{todo.item}}
-        <!--  </span> -->
+          <input type="checkbox" ng-click="todo.checked = !todo.checked">
+          {{todo.item}}
         </span>
       </h2>
-
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="app.js"></script>
