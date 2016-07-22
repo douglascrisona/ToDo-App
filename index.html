@@ -17,6 +17,11 @@
           {{todo.item}}
         </span>
       </h2>
+        <span ng-show="home.todos.length > 0">
+          <h3>
+            Total todos: {{home.todos.length}}
+          </h3>
+        </span>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="app.js"></script>

@@ -12,4 +12,7 @@ function home() {
     {item: 'Eat more'},
     {item: 'Go to sleep'}
   ]
+
 }
+
+//Add the ng-show directive, use it to display the number of todo items.
