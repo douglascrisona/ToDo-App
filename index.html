@@ -12,8 +12,8 @@
         {{home.message}}
       </h1>
       <h2 ng-repeat="todo in home.todos">
+        <input type="checkbox" ng-click="todo.checked = !todo.checked">
         <span ng-class="todo.checked ? 'checked': 'h2'">
-          <input type="checkbox" ng-click="todo.checked = !todo.checked">
           {{todo.item}}
         </span>
       </h2>
