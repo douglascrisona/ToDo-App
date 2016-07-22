@@ -3,14 +3,21 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="default.css">
   </head>
   <body ng-app="todo">
+    <div class="col-md-4">
     <div ng-controller="homeController as home">
       <h1>
         {{home.message}}
       </h1>
       <h2 ng-repeat="todo in home.todos">
-        {{todo.item}}
+        <span ng-class="todo.checked ? 'checked': 'h2'">
+        <!--  <span ng-click="todo.checked = !todo.checked"> -->
+            <input type="checkbox" ng-click="todo.checked = !todo.checked">
+            {{todo.item}}
+        <!--  </span> -->
+        </span>
       </h2>
 
     </div>
