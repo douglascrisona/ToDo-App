@@ -1,18 +1,11 @@
-var app = angular.module('todo', []);
+var express = require('express');
+var MongoClient = require('mongodb').MongoClient
+var app = express();
+var bodyParser = require('body-parser')
 
-app.controller('homeController', home);
+app.use(bodyParser.json())
 
-function home() {
-  var vm = this;
-  vm.message = 'Stuff you have to do:'
-  vm.todos = [
-    {item: 'Wake up'},
-    {item: 'Eat breakfast'},
-    {item: 'Go to school'},
-    {item: 'Eat more'},
-    {item: 'Go to sleep'}
-  ]
+var todos = require('./routes/todos.js');
+app.use('/todos', todos);
 
-}
-
-//Add the ng-show directive, use it to display the number of todo items.
+app.listen(8080)

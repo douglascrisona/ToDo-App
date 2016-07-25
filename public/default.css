@@ -1,0 +1,11 @@
+.checked{
+  text-decoration: line-through;
+}
+
+.list-group-item {
+  margin-bottom: -22px;
+}
+
+h2 {
+  margin-top: 30px;
+}

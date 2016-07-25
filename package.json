@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/douglascrisona/todo#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "chai": "^3.5.0",
+    "express": "^4.14.0",
+    "request": "^2.74.0"
   },
   "devDependencies": {}
 }
