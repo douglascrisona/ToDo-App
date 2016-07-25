@@ -9,18 +9,18 @@
     <div class="col-md-4">
     <div ng-controller="homeController as home">
       <h1>
-        {{home.message}}
+        <span ng-bind="home.message"></span>
       </h1>
-      <h2 ng-repeat="todo in home.todos">
+      <h3 ng-repeat="todo in home.todos" class="list-group-item">
         <input type="checkbox" ng-click="todo.checked = !todo.checked">
-        <span ng-class="todo.checked ? 'checked': 'h2'">
-          {{todo.item}}
+        <span ng-class="todo.checked ? 'checked': 'h3'">
+          <span ng-bind="todo.item"></span>
         </span>
-      </h2>
+      </h3>
         <span ng-show="home.todos.length > 0">
-          <h3>
-            Total todos: {{home.todos.length}}
-          </h3>
+          <h2>
+            Total todos: <span ng-bind="home.todos.length"></span>
+          </h2>
         </span>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
