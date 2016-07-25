@@ -16,21 +16,21 @@ describe('C', function(){
     request({url: 'http://localhost:8080/todos/Run', method: 'POST'},
     function(error, response) {
       assert.equal(response.body, 'Todo Added')
-      done()
-    })
-  })
+      done();
+    });
+  });
 });
 
 describe('R', function() {
   it('Expects todos', function(done) {
-    request({url: 'http://localhost:8080/', method: 'GET'},
+    request({url: 'http://localhost:8080/todos', method: 'GET'},
     function(error, response) {
       assert.equal(response.statusCode, 404)
       done();
     });
   });
   it('Lets you view todos', function(done) {
-    request({url: url, method: 'GET'},
+    request({url: 'http://localhost:8080/todos/all', method: 'GET'},
     function(error, response) {
       assert.equal(response.body, 'Hello')
       done();
@@ -61,13 +61,13 @@ describe('D', function() {
     function(error, response) {
       assert.equal(response.statusCode, 404)
       done();
-    })
-  })
+    });
+  });
   it('Deletes an item', function(done) {
     request({url: 'http://localhost:8080/todos/Run', method: 'DELETE'},
     function(error, response) {
       assert.equal(response.body, 'Todo Removed.')
       done();
-    })
-  })
-})
+    });
+  });
+});

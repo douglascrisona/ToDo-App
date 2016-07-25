@@ -8,4 +8,7 @@ app.use(bodyParser.json())
 var todos = require('./routes/todos.js');
 app.use('/todos', todos);
 
+app.use(express.static('./public'));
+
+
 app.listen(8080)
