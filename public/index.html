@@ -11,10 +11,20 @@
       <h1>
         {{todo.message}}
       </h1>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="input-group">
+            <input type="text" ng-model="item" class="form-control" placeholder="Add todo...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" ng-click="todo.newTodo(item)"><span class="glyphicon glyphicon-plus"></span></button>
+            </span>
+          </div>
+        </div>
+      </div>
       <h3 ng-repeat="todo in todo.list" class="list-group-item">
       <input type="checkbox" ng-click="todo.checked = !todo.checked">
         <span ng-class="todo.checked ? 'checked': 'h3'">
-          {{todo.task}} 
+          {{todo.task}}
         </span>
       </h3>
         <span ng-show="todo.list.length > 0">
