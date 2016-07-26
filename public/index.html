@@ -7,23 +7,24 @@
   </head>
   <body ng-app="todo">
     <div class="col-md-4">
-    <div ng-controller="homeController as home">
+    <div ng-controller="todoController as todo">
       <h1>
-        <span ng-bind="home.message"></span>
+        {{todo.message}}
       </h1>
-      <h3 ng-repeat="todo in home.todos" class="list-group-item">
-        <input type="checkbox" ng-click="todo.checked = !todo.checked">
+      <h3 ng-repeat="todo in todo.list" class="list-group-item">
+      <input type="checkbox" ng-click="todo.checked = !todo.checked">
         <span ng-class="todo.checked ? 'checked': 'h3'">
-          <span ng-bind="todo.item"></span>
+          {{todo.task}} 
         </span>
       </h3>
-        <span ng-show="home.todos.length > 0">
+        <span ng-show="todo.list.length > 0">
           <h2>
-            Total todos: <span ng-bind="home.todos.length"></span>
+            Total todos: {{todo.list.length}}
           </h2>
         </span>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="app.js"></script>
+    <script src="public/app.js"></script>
+    <script src="public/todo/todo.controller.js"></script>
   </body>
 </html>
